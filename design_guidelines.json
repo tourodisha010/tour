@@ -1,0 +1,134 @@
+{
+  "theme": "light",
+  "archetype": "Organic & Earthy (Archetype 1) customized for Heritage Tourism",
+  "brand_name": "Explore Odisha",
+  "contact": {
+    "email": "exploreodisha@gmail.com",
+    "phone": "7077004850",
+    "location": "Bhubaneshwar, Odisha"
+  },
+  "typography": {
+    "font_family_heading": "Cormorant Garamond",
+    "font_family_body": "Manrope",
+    "font_weights": {
+      "heading": [300, 400, 600, 700],
+      "body": [300, 400, 500, 600]
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-none",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "body": "text-base leading-relaxed",
+      "label": "text-xs tracking-[0.2em] uppercase"
+    },
+    "instructions": "Never use Inter. Use Cormorant Garamond for all headings. The typographic mood is editorial, high-end, and heritage-focused. Use tight tracking for headings and loose tracking for uppercase overlines."
+  },
+  "colors": {
+    "palette": {
+      "primary": "#C85A3C",
+      "primary_hover": "#A6472D",
+      "secondary": "#1A2A44",
+      "accent": "#2E4F3F",
+      "background_base": "#F5F2EB",
+      "background_surface": "#FAFAF7",
+      "text_primary": "#1C1A17",
+      "text_secondary": "#4A453E",
+      "border": "#E5DFD3",
+      "admin_sidebar": "#1A2A44"
+    },
+    "instructions": "The palette reflects earthy and authentic tones: terracotta, indigo, sandstone/temple-cream, and jade. Use text_primary for headings and text_secondary for body. Use primary color exclusively for CTAs and highlights. The base background should be #F5F2EB to evoke a warm, physical feel."
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing, Editorial Narrative, Cinematic Flow",
+    "spacing_scale": "Use large paddings like py-24, py-32 for sections to give content breathing room. Containers should have ample inner padding.",
+    "grids": "Use Mode A 'Tetris Grid' for the Destinations Gallery and Tour Packages. Avoid symmetrical 3-column rows everywhere; mix col-spans (e.g., col-span-8 and col-span-4) to create tension.",
+    "alignment": "Favor left-aligned text for paragraphs and lists. Overlap images with text blocks to mimic print magazine layouts.",
+    "borders": "Use subtle 1px borders (border-border) for cards, with no shadows or very diffuse, warm shadows.",
+    "admin_layout": "Control Room Grid (Mode B) for the admin dashboard. Keep it dense, functional, but matching the color palette (e.g., #FAFAF7 surface on #F5F2EB background)."
+  },
+  "components": {
+    "marketing": {
+      "approach": "Custom HTML/Tailwind for layouts. No Shadcn structural elements for marketing sections to maintain the unique editorial feel.",
+      "hero": "Full-height or 80vh cinematic hero. If text overlays an image, use a subtle gradient mask (bg-gradient-to-t from-black/60 to-transparent) rather than a flat overlay. Must evoke slow-pacing emotion.",
+      "nav": "Sticky header with glassmorphism (backdrop-blur-xl bg-[#F5F2EB]/80) and a subtle bottom border. Include brand logo, nav links, and a primary CTA.",
+      "dividers": "Incorporate subtle Pattachitra-inspired SVG motifs or simple elegant lines between major sections.",
+      "testimonials": "Editorial quote blocks. Large serif quotes with small uppercase attribution.",
+      "forms": "Inquiry form should use customized Shadcn components (Input, Textarea, Select), blending seamlessly into the #F5F2EB background with earthy border colors."
+    },
+    "admin": {
+      "approach": "Use customized Shadcn UI components. Keep surfaces flat or with max 8px border-radius.",
+      "tables": "Clean, distinct rows for inquiries/leads.",
+      "sidebar": "Dark indigo (#1A2A44) sidebar with white/cream text for contrast."
+    }
+  },
+  "motion_and_interaction": {
+    "hover_states": "Buttons should lift slightly (-translate-y-0.5) and shadow should become deeper. Images in gallery should scale up subtly (scale-105) on hover within an overflow-hidden container.",
+    "transitions": "Use slow, ease-out transitions (duration-500 or duration-700) to reinforce the slow, high-end travel vibe.",
+    "scroll": "Staggered fade-up entrances for text and images as they enter the viewport."
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure text over images has sufficient contrast. Use text shadows if necessary.",
+    "testing_attributes": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., `data-testid=\"inquiry-submit-button\"`, `data-testid=\"package-card\"`)."
+  },
+  "media": {
+    "instructions_to_main_agent": "Use ONLY these specific images. Do not use generic placeholders. Match images to their described sections.",
+    "images": {
+      "hero": {
+        "url": "https://images.pexels.com/photos/32331079/pexels-photo-32331079.jpeg",
+        "description": "Ancient carvings on the historic Konark Sun Temple. Perfect for hero section to establish deep heritage.",
+        "alt": "Konark Sun Temple Carvings"
+      },
+      "packages": [
+        {
+          "title": "Golden Triangle",
+          "url": "https://images.pexels.com/photos/20371128/pexels-photo-20371128.jpeg",
+          "description": "Intricate stone wheel sculpture at Konark.",
+          "alt": "Golden Triangle Konark"
+        },
+        {
+          "title": "Chilika Lake",
+          "url": "https://images.unsplash.com/photo-1618843808465-befb4ad4a183",
+          "description": "People riding a blue boat on Chilika Lake.",
+          "alt": "Chilika Lake Birds"
+        },
+        {
+          "title": "Tribal Circuit",
+          "url": "https://images.unsplash.com/photo-1724521260101-c13e61992638",
+          "description": "An old woman with a drum in her hand, showcasing tribal culture.",
+          "alt": "Odisha Tribal Circuit"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://images.pexels.com/photos/38128176/pexels-photo-38128176.jpeg",
+          "description": "Sunset view at Puri Beach.",
+          "alt": "Puri Beach Sunset"
+        },
+        {
+          "url": "https://images.pexels.com/photos/15678073/pexels-photo-15678073.jpeg",
+          "description": "Woman performing graceful Odissi dance.",
+          "alt": "Odissi Dance Performance"
+        },
+        {
+          "url": "https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg",
+          "description": "Colorful traditional silk fabrics showcasing local craftsmanship.",
+          "alt": "Traditional Textiles"
+        },
+        {
+          "url": "https://images.unsplash.com/flagged/photo-1577604981316-298e453a19dd",
+          "description": "Indian tribal heritage culture.",
+          "alt": "Tribal Heritage"
+        }
+      ],
+      "about": {
+        "url": "https://images.pexels.com/photos/14090681/pexels-photo-14090681.jpeg",
+        "description": "Portrait of an Odissi dancer. Adds a human, authentic touch to the company story.",
+        "alt": "Odissi Dancer Portrait"
+      }
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "instructions": "Use lucide-react for standard icons. Keep icon sizes consistent. For dividers, use custom inline SVGs inspired by Pattachitra art or simple elegant lines."
+  }
+}
