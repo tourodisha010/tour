@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tour Odisha — Journeys, rooted.</title>
+<meta name="description" content="An Odisha-only travel house crafting slow, rooted journeys through temples, tribal hills, mangroves and coastal towns — always led by locals." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+  :root {
+    --eo-terracotta: #C85A3C;
+    --eo-terracotta-dark: #A6472D;
+    --eo-indigo: #1A2A44;
+    --eo-jade: #2E4F3F;
+    --eo-cream: #F5F2EB;
+    --eo-surface: #FAFAF7;
+    --eo-ink: #141414ef;
+    --eo-ink-soft: #141414ef;
+    --eo-border: #E5DFD3;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background-color: var(--eo-cream);
+    color: var(--eo-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--eo-terracotta); color: var(--eo-cream); }
+  em { font-style: normal; color: var(--eo-terracotta); }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .overline {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--eo-terracotta);
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 40px;
+    transition: all 500ms ease-out;
+  }
+  .nav.scrolled {
+    background: rgba(245,242,235,0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--eo-border);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 999px;
+    background: var(--eo-terracotta); color: var(--eo-cream);
+    display: grid; place-items: center;
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px;
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-size: 30px;
+    color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    transition: color 500ms;
+  }
+  .nav.scrolled .brand-name { color: var(--eo-ink); text-shadow: none; }
+  .brand-sub { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,242,235,0.9); margin-top: 4px; }
+  .nav.scrolled .brand-sub { color: var(--eo-ink-soft); }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { font-size: 14px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.4); transition: color 300ms; }
+  .nav.scrolled .nav-links a { color: var(--eo-ink); text-shadow: none; }
+  .nav-links a:hover { color: var(--eo-terracotta); }
+  .btn-primary {
+    display: inline-block;
+    background: var(--eo-terracotta); color: var(--eo-cream);
+    padding: 10px 22px; border-radius: 999px;
+    font-size: 14px; border: none; cursor: pointer;
+    transition: transform 500ms ease-out, background 300ms, box-shadow 500ms;
+  }
+  .btn-primary:hover {
+    background: var(--eo-terracotta-dark); transform: translateY(-2px);
+    box-shadow: 0 12px 32px -12px rgba(200,90,60,0.55);
+  }
+  .btn-outline {
+    display: inline-block; padding: 13px 26px; border-radius: 999px;
+    border: 1px solid rgba(245,242,235,0.75); color: var(--eo-cream);
+    font-size: 14px; transition: all 500ms;
+  }
+  .btn-outline:hover { background: var(--eo-cream); color: var(--eo-ink); transform: translateY(-2px); }
+  .nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; }
+
+  /* HERO */
+  .hero { position: relative; min-height: 100vh; overflow: hidden; }
+  .hero img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }
+  .hero-mask {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to top, rgba(20,15,12,0.95) 0%, rgba(20,15,12,0.78) 40%, rgba(20,15,12,0.55) 80%, rgba(20,15,12,0.4) 100%),
+      radial-gradient(80% 60% at 20% 80%, rgba(200,90,60,0.18), transparent 70%);
+  }
+  .hero-inner {
+    position: relative; z-index: 5;
+    max-width: 1200px; margin: 0 auto; padding: 160px 24px 80px;
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-eyebrow { color: rgba(245,242,235,0.85); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.02; letter-spacing: -0.01em;
+    color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    margin-top: 20px; max-width: 800px;
+  }
+  .hero h1 em { color: rgba(245,242,235,0.95); font-weight: 300; }
+  .hero p {
+    max-width: 560px; margin-top: 28px; color: rgba(245,242,235,0.95);
+    font-size: 1.05rem; line-height: 1.7; text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  }
+  .hero-ctas { margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-ctas .btn-primary { padding: 14px 28px; }
+
+  /* Section common */
+  section { padding: 100px 0; }
+  .section-head { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: end; margin-bottom: 56px; }
+  .section-head h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; }
+  .section-head p { color: var(--eo-ink-soft); }
+  .divider {
+    display: flex; align-items: center; gap: 16px;
+    color: rgba(28,26,23,0.35); margin: 60px 0;
+  }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: rgba(28,26,23,0.2); }
+  .divider .dot { color: var(--eo-terracotta); font-size: 10px; }
+
+  /* ABOUT */
+  .about { background:
+    radial-gradient(1200px 500px at 10% 0%, rgba(200,90,60,0.06), transparent 60%),
+    radial-gradient(900px 400px at 90% 100%, rgba(46,79,63,0.05), transparent 60%);
+  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 36px; max-width: 480px; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--eo-terracotta); }
+  .stat-lbl { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--eo-ink-soft); margin-top: 6px; }
+  .about-img { position: relative; }
+  .about-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 1px solid var(--eo-border); }
+  .quote-card {
+    position: absolute; bottom: -30px; left: -30px;
+    background: var(--eo-cream); border: 1px solid var(--eo-border);
+    padding: 24px; max-width: 300px;
+  }
+  .quote-card p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.35rem; line-height: 1.3; margin: 0; }
+  .quote-card .cite { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--eo-ink-soft); margin-top: 16px; }
+
+  /* PACKAGES */
+  .packages { background: var(--eo-surface); }
+  .pkg-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+  .pkg {
+    display: block; overflow: hidden; border: 1px solid var(--eo-border);
+    background: var(--eo-cream); transition: transform 500ms;
+  }
+  .pkg:hover { transform: translateY(-4px); }
+  .pkg .thumb { overflow: hidden; }
+  .pkg .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 900ms; display: block; }
+  .pkg:hover .thumb img { transform: scale(1.06); }
+  .pkg-body { padding: 24px 28px; }
+  .pkg-meta { display: flex; justify-content: space-between; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eo-ink-soft); }
+  .pkg-meta .dur { color: var(--eo-terracotta); }
+  .pkg-title { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; margin: 10px 0; transition: color 500ms; }
+  .pkg:hover .pkg-title { color: var(--eo-terracotta); }
+  .pkg-desc { font-size: 0.9rem; color: var(--eo-ink-soft); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pkg-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--eo-border); display: flex; justify-content: space-between; align-items: center; }
+  .pkg-foot .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eo-ink-soft); }
+  .arrow-btn {
+    width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--eo-ink);
+    display: grid; place-items: center; transition: all 500ms;
+  }
+  .pkg:hover .arrow-btn { background: var(--eo-terracotta); border-color: var(--eo-terracotta); color: #fff; }
+
+  /* GALLERY */
+  .gallery { }
+  .gal-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .gal-item { position: relative; overflow: hidden; border: 1px solid var(--eo-border); }
+  .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 900ms; display: block; }
+  .gal-item:hover img { transform: scale(1.06); }
+  .gal-mask { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent 60%); }
+  .gal-cap { position: absolute; bottom: 18px; left: 22px; color: var(--eo-cream); }
+  .gal-cap .top { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.75; }
+  .gal-cap .name { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--eo-indigo); color: var(--eo-cream); }
+  .t-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+  .t-item { border-left: 1px solid rgba(245,242,235,0.25); padding: 8px 28px; position: relative; }
+  .t-item i.fa-quote-left { position: absolute; left: -18px; top: 0; color: var(--eo-terracotta); font-size: 1.5rem; }
+  .t-item blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.65rem; line-height: 1.35; margin: 0; }
+  .t-item .cite { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(245,242,235,0.6); margin-top: 24px; }
+
+  /* STORIES / BLOG */
+  .stories-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; }
+  .story .thumb { aspect-ratio: 4/3; overflow: hidden; border: 1px solid var(--eo-border); }
+  .story .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 900ms; }
+  .story:hover .thumb img { transform: scale(1.06); }
+  .story .meta { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eo-ink-soft); margin-top: 20px; }
+  .story h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; margin: 12px 0 12px; transition: color 500ms; }
+  .story:hover h3 { color: var(--eo-terracotta); }
+  .story p { font-size: 0.9rem; color: var(--eo-ink-soft); line-height: 1.55; margin: 0; }
+
+  /* CONTACT */
+  .contact { background: var(--eo-cream); }
+  .contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 60px; }
+  .contact h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; margin-top: 12px; }
+  .contact-lead { color: var(--eo-ink-soft); max-width: 400px; margin-top: 20px; line-height: 1.7; }
+  .contact-list { margin-top: 40px; display: grid; gap: 20px; }
+  .cl-item { display: flex; gap: 12px; align-items: flex-start; }
+  .cl-icon {
+    width: 36px; height: 36px; border-radius: 999px; background: rgba(200,90,60,0.12);
+    display: grid; place-items: center; color: var(--eo-terracotta); font-size: 14px; flex: none;
+  }
+  .cl-icon.jade { background: rgba(46,79,63,0.15); color: var(--eo-jade); }
+  .cl-lbl { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eo-ink-soft); }
+  .cl-val { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+  .cl-val:hover { color: var(--eo-terracotta); }
+  .cl-item.wa .cl-val:hover { color: var(--eo-jade); }
+
+  form.enquiry {
+    background: var(--eo-surface); border: 1px solid var(--eo-border);
+    padding: 40px; align-self: flex-start;
+  }
+  form.enquiry h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; margin-top: 6px; }
+  form.enquiry .sub { font-size: 0.9rem; color: var(--eo-ink-soft); margin-top: 8px; }
+  .fields { display: grid; gap: 20px; margin-top: 32px; }
+  .field label span { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eo-ink-soft); display: block; }
+  .field input {
+    width: 100%; padding: 12px 14px; margin-top: 8px;
+    background: var(--eo-cream); border: 1px solid var(--eo-border);
+    color: var(--eo-ink); font-family: inherit; font-size: 0.95rem;
+    outline: none; transition: border-color 300ms, box-shadow 300ms;
+  }
+  .field input:focus {
+    border-color: var(--eo-terracotta);
+    box-shadow: 0 0 0 3px rgba(200,90,60,0.15);
+  }
+  .form-foot { margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .form-foot p { font-size: 0.75rem; color: var(--eo-ink-soft); max-width: 320px; margin: 0; }
+
+  /* FOOTER */
+  footer { background: var(--eo-indigo); color: var(--eo-cream); margin-top: 80px; }
+  .f-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px 40px; }
+  .f-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-top: 48px; }
+  .f-brand { display: flex; align-items: center; gap: 12px; }
+  .f-brand-mark { width: 44px; height: 44px; border-radius: 999px; background: var(--eo-terracotta); color: var(--eo-cream); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px; }
+  .f-brand-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 34px; }
+  .f-copy { color: rgba(245,242,235,0.7); max-width: 400px; line-height: 1.7; margin-top: 20px; }
+  .f-col-title { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
+  .f-col ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; color: rgba(245,242,235,0.85); }
+  .f-col ul li a:hover { color: var(--eo-terracotta); }
+  .f-col ul li i { margin-right: 8px; color: rgba(245,242,235,0.7); }
+  .socials { margin-top: 20px; display: flex; gap: 12px; }
+  .socials a { width: 36px; height: 36px; border-radius: 999px; border: 1px solid rgba(245,242,235,0.25); display: grid; place-items: center; transition: all 400ms; }
+  .socials a:hover { background: var(--eo-terracotta); border-color: var(--eo-terracotta); }
+  .f-bot { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(245,242,235,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(245,242,235,0.55); }
+
+  /* Toast */
+  .toast {
+    position: fixed; top: 20px; right: 20px; z-index: 100;
+    background: #fff; color: var(--eo-ink); border: 1px solid var(--eo-border);
+    padding: 14px 18px; border-radius: 6px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2);
+    display: none; max-width: 340px; font-size: 0.9rem;
+  }
+  .toast.show { display: block; animation: slideIn 300ms ease-out; }
+  .toast .t-title { font-weight: 600; color: var(--eo-jade); }
+  .toast .t-desc { font-size: 0.8rem; color: var(--eo-ink-soft); margin-top: 4px; }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: none; } }
+
+  /* WhatsApp floating */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 40;
+    width: 56px; height: 56px; border-radius: 999px;
+    background: #25D366; color: #fff;
+    display: grid; place-items: center; font-size: 26px;
+    box-shadow: 0 12px 28px -8px rgba(37,211,102,0.5);
+    transition: transform 300ms;
+  }
+  .wa-float:hover { transform: translateY(-4px) scale(1.05); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav.open .nav-links {
+      display: flex; flex-direction: column; gap: 16px;
+      position: absolute; top: 76px; left: 0; right: 0;
+      background: rgba(245,242,235,0.95); backdrop-filter: blur(18px);
+      padding: 24px; border-bottom: 1px solid var(--eo-border);
+    }
+    .nav.open .nav-links a { color: var(--eo-ink); text-shadow: none; }
+    section { padding: 70px 0; }
+    .section-head, .about-grid, .contact-grid, .f-grid { grid-template-columns: 1fr; gap: 24px; }
+    .pkg-grid { grid-template-columns: 1fr; }
+    .pkg { grid-column: auto; }
+    .gal-grid { grid-template-columns: repeat(2,1fr); }
+    .gal-item { grid-column: auto !important; }
+    .gal-item img { aspect-ratio: 1; }
+    .t-grid, .stories-grid { grid-template-columns: 1fr; }
+    .quote-card { position: static; margin-top: 20px; }
+    form.enquiry { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#home" class="brand">
+    <span class="brand-mark">T</span>
+    <span class="brand-text">
+      <span class="brand-name">Tour Odisha</span>
+      <span class="brand-sub">Journeys, rooted.</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#gallery">Destinations</a>
+    <a href="#stories">Stories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn-primary">Plan a Journey</a>
+  </div>
+  <button class="nav-toggle" onclick="document.getElementById('nav').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <img src="https://images.pexels.com/photos/32331079/pexels-photo-32331079.jpeg" alt="Konark Sun Temple carvings" />
+  <div class="hero-mask"></div>
+  <div class="hero-inner">
+    <div class="overline hero-eyebrow">Odisha · Est. Bhubaneshwar</div>
+    <h1>Where every stone<br/><em>remembers a prayer.</em></h1>
+    <p>    We craft a authentic and rooted journeys across only one land — Odisha. Temples that hum at dawn, lagoons where dolphins graze, and forests where the tribal drum still keeps time. We provide experiances with real odisha essence that will last in your memory foreever.</p>
+    <div class="hero-ctas">
+      <a href="#packages" class="btn-primary">Explore Journeys</a>
+      <a href="#contact" class="btn-outline">Speak with us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="divider"><span class="dot">&#9679;</span></div>
+    <div class="about-grid">
+      <div>
+        <div class="overline">About us</div>
+        <h2 style="margin-top:14px">We serve <em>one</em> state,<br/> and we serve her <span style="color:var(--eo-ink)">deeply</span>.</h2>
+        <p style="color:var(--eo-ink-soft); line-height:1.7; margin-top: 24px; max-width: 500px;">
+          Tour Odisha was built on a simple belief — that a place is best travelled by those
+          who have wept, cooked, prayed and buried in it. Our team is entirely from Odisha —
+          from Puri's beach-shack cooks to Koraput's Dongria weavers to Bhubaneshwar's temple
+          historians. We don't sell destinations. We hand you the keys to a home.
+        </p>
+        <div class="stats">
+          <div><div class="stat-num">12+</div><div class="stat-lbl">Years, local</div></div>
+          <div><div class="stat-num">30</div><div class="stat-lbl">Districts</div></div>
+          <div><div class="stat-num">4.9★</div><div class="stat-lbl">Rating</div></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.pexels.com/photos/14090681/pexels-photo-14090681.jpeg" alt="Odissi dancer portrait" />
+        <div class="quote-card">
+          <p>"Odissi taught me that stillness has a spine."</p>
+          <div class="cite">— Rekha, resident dancer & guide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="overline">Curated journeys</div>
+        <h2 style="margin-top:12px"> Ways to <em>meet</em> Odisha.</h2>
+      </div>
+      <p>Each journey is unique, locally led and can be shaped to your pace, dietary needs and interests. Tap a journey to see the full day-by-day itinerary.</p>
+    </div>
+
+    <div class="pkg-grid">
+      <a href="packages.html#golden-triangle" class="pkg" style="grid-column: span 8;">
+        <div class="thumb" style="aspect-ratio: 16/11;"><img src="https://images.pexels.com/photos/20371128/pexels-photo-20371128.jpeg" alt="Konark wheel"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Bhubaneshwar · Puri · Konark</span><span class="dur">4D / 3N</span></div>
+          <h3 class="pkg-title">The Golden Triangle</h3>
+          <p class="pkg-desc">Trace the spiritual and architectural heart of Odisha through the sacred trio — temple-city Bhubaneshwar, Lord Jagannath's Puri, and the majestic Sun Temple of Konark.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#chilika" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.unsplash.com/photo-1618843808465-befb4ad4a183" alt="Chilika Lake"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Asia's largest lagoon</span><span class="dur">2D / 1N</span></div>
+          <h3 class="pkg-title">Whispers of Chilika</h3>
+          <p class="pkg-desc">Drift across pastel dawns with Irrawaddy dolphins, migratory birds, and fishermen who read the water like scripture.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#tribal-trail" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.unsplash.com/photo-1724521260101-c13e61992638" alt="Tribal circuit"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Koraput · Jeypore</span><span class="dur">5D / 4N</span></div>
+          <h3 class="pkg-title">The Tribal Trail</h3>
+          <p class="pkg-desc">Meet the Bonda, Dongria Kondh and Paraja communities of the Eastern Ghats — a journey led by locals, into weekly haats and weaving villages.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#bhitarkanika" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.pexels.com/photos/38128176/pexels-photo-38128176.jpeg" alt="Bhitarkanika"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Mangroves · Crocodiles</span><span class="dur">3D / 2N</span></div>
+          <h3 class="pkg-title">Bhitarkanika Wilderness</h3>
+          <p class="pkg-desc">Glide through mangrove creeks, spot saltwater crocodiles basking on mudflats, and witness Olive Ridley turtles at Gahirmatha.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#similipal" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.pexels.com/photos/15678073/pexels-photo-15678073.jpeg" alt="Similipal"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Mayurbhanj highlands</span><span class="dur">3D / 2N</span></div>
+          <h3 class="pkg-title">Similipal Forest Retreat</h3>
+          <p class="pkg-desc">Sal forests, tumbling waterfalls, and the elusive melanistic tiger — Similipal is Odisha's wildest secret, home to the Santhal and Ho tribes.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#buddhist-trail" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg" alt="Buddhist Trail"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Ratnagiri · Udayagiri</span><span class="dur">2D / 1N</span></div>
+          <h3 class="pkg-title">The Buddhist Diamond Triangle</h3>
+          <p class="pkg-desc">Uncover a lesser-known chapter of Buddhism — hilltop stupas, monastic ruins and a serene Buddha relic casket in the mist-fed Assia hills.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#gopalpur" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.pexels.com/photos/38128176/pexels-photo-38128176.jpeg" alt="Gopalpur coastline"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Gopalpur-on-Sea</span><span class="dur">2D / 1N</span></div>
+          <h3 class="pkg-title">Gopalpur Coastal Retreat</h3>
+          <p class="pkg-desc">A quiet colonial-era beach town — lighthouse walks, hilltop Taratarini temple, and slow sunsets away from the crowds.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#daringbadi" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.unsplash.com/photo-1508311603478-ce574376c3cf" alt="Daringbadi hills"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>"Kashmir of Odisha"</span><span class="dur">3D / 2N</span></div>
+          <h3 class="pkg-title">Daringbadi Hill Escape</h3>
+          <p class="pkg-desc">Misty pine groves, coffee and pepper plantations, waterfalls and Kondh hamlets tucked into Odisha's highest hill range.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+      <a href="packages.html#sambalpur" class="pkg" style="grid-column: span 4;">
+        <div class="thumb" style="aspect-ratio: 4/3;"><img src="https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg" alt="Sambalpuri weaving"/></div>
+        <div class="pkg-body">
+          <div class="pkg-meta"><span>Sambalpur · Hirakud</span><span class="dur">3D / 2N</span></div>
+          <h3 class="pkg-title">Sambalpuri Weave & Hirakud Trail</h3>
+          <p class="pkg-desc">Watch ikat come alive on the loom in weaving villages, then chase sunset over Hirakud — one of the world's longest earthen dams.</p>
+          <div class="pkg-foot"><span class="label">View itinerary</span><span class="arrow-btn"><i class="fa-solid fa-arrow-right" style="font-size:12px"></i></span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="divider" style="margin-top:60px"><span class="dot">&#9679;</span></div>
+    <p style="text-align:center; margin-top:-30px;"><a href="packages.html" class="btn-outline" style="border-color: var(--eo-ink); color: var(--eo-ink);">See every journey in detail →</a></p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="overline">Destinations</div>
+        <h2 style="margin-top:12px">A land woven in <span style="color:var(--eo-jade)">indigo</span>,<br/> sand and stone.</h2>
+      </div>
+      <p>From Bay of Bengal shores to the granite Eastern Ghats — six frames of a state that asks to be read slowly.</p>
+    </div>
+
+    <div class="gal-grid">
+      <div class="gal-item" style="grid-column: span 6; grid-row: span 2; aspect-ratio: 4/5;">
+        <img src="https://images.pexels.com/photos/38128176/pexels-photo-38128176.jpeg" alt="Puri Beach Sunset" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Puri</div></div>
+      </div>
+      <div class="gal-item" style="grid-column: span 3; aspect-ratio: 1;">
+        <img src="https://images.pexels.com/photos/15678073/pexels-photo-15678073.jpeg" alt="Odissi Dance" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Odissi</div></div>
+      </div>
+      <div class="gal-item" style="grid-column: span 3; aspect-ratio: 1;">
+        <img src="https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg" alt="Textiles" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Ikat & Sambalpuri</div></div>
+      </div>
+      <div class="gal-item" style="grid-column: span 4; aspect-ratio: 4/3;">
+        <img src="https://images.unsplash.com/flagged/photo-1577604981316-298e453a19dd" alt="Tribal heritage" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Koraput Hills</div></div>
+      </div>
+      <div class="gal-item" style="grid-column: span 4; aspect-ratio: 4/3;">
+        <img src="https://images.pexels.com/photos/20371128/pexels-photo-20371128.jpeg" alt="Konark" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Konark</div></div>
+      </div>
+      <div class="gal-item" style="grid-column: span 4; aspect-ratio: 4/3;">
+        <img src="https://images.unsplash.com/photo-1618843808465-befb4ad4a183" alt="Chilika" />
+        <div class="gal-mask"></div>
+        <div class="gal-cap"><div class="top">Odisha</div><div class="name">Chilika</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div style="max-width: 560px">
+      <div class="overline">Traveller Notes</div>
+      <h2 style="margin-top:12px; font-size: clamp(2rem, 4vw, 3rem)">Postcards from<br/> those who came home <span style="color:var(--eo-terracotta)">changed</span>.</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-item">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>“The tribal trail was the most humbling week of our lives. Our guide made us feel like we were visiting family, not tourists.”</blockquote>
+        <div class="cite">— Ananya Rao · Bengaluru</div>
+      </div>
+      <div class="t-item">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>“Chilika at dawn is a memory I keep returning to. Tour Odisha planned every detail with quiet elegance.”</blockquote>
+        <div class="cite">— Marc Dubois · Paris, France</div>
+      </div>
+      <div class="t-item">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>“From the food to the homestays to the storytelling — this is how travel is supposed to feel. Rooted, real, unforgettable.”</blockquote>
+        <div class="cite">— Ritika Sharma · New Delhi</div>
+      </div>
+      <div class="t-item">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>“I came for Konark. I left with friendships, an ikat saree, and a promise to return in monsoon.”</blockquote>
+        <div class="cite">— Yuki Tanaka · Kyoto, Japan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section id="stories">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="overline">Field notes</div>
+        <h2 style="margin-top:12px">Stories from the <span style="color:var(--eo-jade)">road</span>.</h2>
+      </div>
+      <p>Slow reads from our guides — dispatches from tribal haats, temple courtyards and monsoon-drenched forests.</p>
+    </div>
+    <div class="stories-grid">
+      <article class="story">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1724521260101-c13e61992638" alt="Koraput morning" /></div>
+        <div class="meta">14 Aug 2025 · Sanjukta Mishra</div>
+        <h3>A Monsoon Morning in Koraput</h3>
+        <p>When the Eastern Ghats disappear into mist, weekly haats become theatres of colour, sound and memory.</p>
+      </article>
+      <article class="story">
+        <div class="thumb"><img src="https://images.pexels.com/photos/32331079/pexels-photo-32331079.jpeg" alt="Konark reading" /></div>
+        <div class="meta">02 Sep 2025 · Debasish Patra</div>
+        <h3>Reading Konark: The Sun Temple as Manuscript</h3>
+        <p>Every stone at Konark is a paragraph. We spend an afternoon translating just three of them.</p>
+      </article>
+      <article class="story">
+        <div class="thumb"><img src="https://images.unsplash.com/photo-1618843808465-befb4ad4a183" alt="Chilika dolphins" /></div>
+        <div class="meta">19 Oct 2025 · Priya Nayak</div>
+        <h3>The Fisherfolk & the Dolphins of Chilika</h3>
+        <p>For centuries, Chilika's fishermen and Irrawaddy dolphins have shared the lagoon — a partnership older than any treaty.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="overline">Begin your journey</div>
+        <h2>Tell us <em>what stirs you</em><br/>— we'll compose the rest.</h2>
+        <p class="contact-lead">Share a few details and a local planner in Bhubaneshwar will respond within one working day with a hand-shaped itinerary.</p>
+
+        <div class="contact-list">
+          <div class="cl-item"><span class="cl-icon"><i class="fa-solid fa-location-dot"></i></span><div><div class="cl-lbl">Office</div><div class="cl-val">Bhubaneshwar, Odisha</div></div></div>
+          <div class="cl-item"><span class="cl-icon"><i class="fa-solid fa-phone"></i></span><div><div class="cl-lbl">Call</div><a href="tel:7077006689" class="cl-val">7077006689</a></div></div>
+          <div class="cl-item wa"><span class="cl-icon jade"><i class="fa-brands fa-whatsapp"></i></span><div><div class="cl-lbl">WhatsApp</div><a href="https://wa.me/917077006689" target="_blank" rel="noreferrer" class="cl-val">7077006689</a></div></div>
+          <div class="cl-item"><span class="cl-icon"><i class="fa-solid fa-envelope"></i></span><div><div class="cl-lbl">Email</div><a href="mailto:tourodisha010@gmail.com" class="cl-val" style="word-break:break-all">tourodisha010@gmail.com</a></div></div>
+        </div>
+      </div>
+
+     <form class="enquiry" id="enquiry-form" action="https://formspree.io/f/xnjkldak" method="POST">
+        <div class="overline">Enquiry</div>
+        <h3>Leave your details</h3>
+        <div class="sub">We'll get back within one working day.</div>
+        <div class="fields">
+          <div class="field"><label><span>Your name *</span><input required id="in-name" placeholder="Ananya Rao"/></label></div>
+          <div class="field"><label><span>Email *</span><input required type="email" id="in-email" placeholder="you@email.com"/></label></div>
+          <div class="field"><label><span>Phone *</span><input required id="in-phone" placeholder="+91 ·······"/></label></div>
+        </div>
+        <div class="form-foot">
+          <p>Your details stay with our Bhubaneshwar office only.</p>
+          <button type="submit" class="btn-primary" style="padding: 13px 28px;">Send enquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-inner">
+    <div class="divider" style="border-color: rgba(245,242,235,0.15)">
+      <span class="dot" style="color:var(--eo-terracotta)">&#9679;</span>
+    </div>
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">
+          <span class="f-brand-mark">T</span>
+          <span class="f-brand-name">Tour Odisha</span>
+        </div>
+        <p class="f-copy">An Odisha-only travel house crafting slow, rooted journeys through temples, tribal hills, mangroves and coastal towns — always led by locals who call this land home.</p>
+      </div>
+      <div class="f-col">
+        <div class="f-col-title">Explore</div>
+        <ul>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#gallery">Destinations</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#about">About us</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <div class="f-col-title">Contact</div>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Bhubaneshwar, Odisha</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:7077006689">7077006689</a></li>
+          <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/917077006689" target="_blank">WhatsApp 7077006689</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tourodisha010@gmail.com">tourodisha010@gmail.com</a></li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-bot">
+      <div>© <span id="year"></span> Tour Odisha. Crafted with reverence in Bhubaneshwar.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/917077006689" target="_blank" rel="noreferrer" class="wa-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <div class="t-title">Thank you — we'll reach out within a day.</div>
+  <div class="t-desc" id="t-desc"></div>
+</div>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Form: send via WhatsApp (opens WA with prefilled message)
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('in-name').value.trim();
+    const email = document.getElementById('in-email').value.trim();
+    const phone = document.getElementById('in-phone').value.trim();
+    if (!name || !email || !phone) return false;
+
+    const msg = `Hello Tour Odisha — I'd like to enquire about a journey.%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}`;
+    const waURL = `https://wa.me/917077006689?text=${msg}`;
+
+    // Show toast
+    const toast = document.getElementById('toast');
+    document.getElementById('t-desc').textContent = `A local expert will reach out at ${phone}. Opening WhatsApp…`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4500);
+
+    // Open WhatsApp
+    setTimeout(() => window.open(waURL, '_blank'), 400);
+
+    // Clear
+    e.target.reset();
+    return false;
+  }
+
+  // Close nav on link click (mobile)
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+
+</body>
+</html>
