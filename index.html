@@ -312,10 +312,11 @@
         <h3>Leave your details</h3>
         <div class="sub">We'll get back within one working day.</div>
         <div class="fields">
-          <div class="field"><label><span>Your name *</span><input required id="in-name" placeholder="Ananya Rao"/></label></div>
-          <div class="field"><label><span>Email *</span><input required type="email" id="in-email" placeholder="you@email.com"/></label></div>
-          <div class="field"><label><span>Phone *</span><input required id="in-phone" placeholder="+91 ·······"/></label></div>
+          <div class="field"><label><span>Your name *</span><input required id="in-name" name="name" placeholder="Ananya Rao"/></label></div>
+          <div class="field"><label><span>Email *</span><input required type="email" id="in-email" name="email" placeholder="you@email.com"/></label></div>
+          <div class="field"><label><span>Phone *</span><input required id="in-phone" name="phone" placeholder="+91 ·······"/></label></div>
         </div>
+        <input type="hidden" name="_subject" value="New enquiry — Tour Odisha website" />
         <div class="form-foot">
           <p>Your details stay with our Bhubaneshwar office only.</p>
           <button type="submit" class="btn-primary" style="padding: 13px 28px;">Send enquiry</button>
@@ -386,30 +387,49 @@
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Form: send via WhatsApp (opens WA with prefilled message)
-  function handleSubmit(e) {
+  // Form: send straight to email via Formspree
+  const enquiryForm = document.getElementById('enquiry-form');
+  enquiryForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    const name = document.getElementById('in-name').value.trim();
-    const email = document.getElementById('in-email').value.trim();
-    const phone = document.getElementById('in-phone').value.trim();
-    if (!name || !email || !phone) return false;
+    const form = e.target;
+    const data = new FormData(form);
+    const name = data.get('name').trim();
+    const email = data.get('email').trim();
+    const phone = data.get('phone').trim();
+    if (!name || !email || !phone) return;
 
-    const msg = `Hello Tour Odisha — I'd like to enquire about a journey.%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}`;
-    const waURL = `https://wa.me/917077006689?text=${msg}`;
+    const btn = form.querySelector('button[type="submit"]');
+    const originalLabel = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
 
-    // Show toast
     const toast = document.getElementById('toast');
-    document.getElementById('t-desc').textContent = `A local expert will reach out at ${phone}. Opening WhatsApp…`;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4500);
+    const tDesc = document.getElementById('t-desc');
 
-    // Open WhatsApp
-    setTimeout(() => window.open(waURL, '_blank'), 400);
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    // Clear
-    e.target.reset();
-    return false;
-  }
+      if (res.ok) {
+        tDesc.textContent = `Thanks ${name}! Your enquiry has been sent — we'll reach out at ${phone} within one working day.`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 5000);
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      tDesc.textContent = `Couldn't send that just now — please WhatsApp us directly at 7077006689 instead.`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 6000);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+    }
+  });
 
   // Close nav on link click (mobile)
   document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
