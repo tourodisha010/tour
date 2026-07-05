@@ -30,7 +30,7 @@
 
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .overline {
-    font-size: 0.95rem; font-weight: 600; letter-spacing: 0.24em;
+    font-size: 1.5rem; font-weight: 600; letter-spacing: 0.24em;
     text-transform: uppercase; color: var(--eo-terracotta);
   }
 
@@ -61,7 +61,7 @@
     transition: color 500ms;
   }
   .nav.scrolled .brand-name { color: var(--eo-ink); text-shadow: none; }
-  .brand-sub { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,242,235,0.9); margin-top: 4px; }
+  .brand-sub { font-size: 0.99rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,242,235,0.9); margin-top: 4px; }
   .nav.scrolled .brand-sub { color: var(--eo-ink-soft); }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a { font-size: 14px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.4); transition: color 300ms; }
