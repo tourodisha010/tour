@@ -295,7 +295,7 @@
     section { padding: 70px 0; }
     .section-head, .about-grid, .contact-grid, .f-grid { grid-template-columns: 1fr; gap: 24px; }
     .pkg-grid { grid-template-columns: 1fr; }
-    .pkg { grid-column: auto; }
+    .pkg { grid-column: auto !important; }
     .gal-grid { grid-template-columns: repeat(2,1fr); }
     .gal-item { grid-column: auto !important; }
     .gal-item img { aspect-ratio: 1; }
