@@ -52,7 +52,7 @@
     background: var(--eo-terracotta); color: var(--eo-cream);
     display: grid; place-items: center;
     font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px;
-    .brand-mark { object-fit: cover; }
+  .brand-mark { object-fit: cover; }
   }
   .brand-text { display: flex; flex-direction: column; line-height: 1; }
   .brand-name {
@@ -248,7 +248,7 @@
   .f-brand { display: flex; align-items: center; gap: 12px; }
   .f-brand-mark { width: 44px; height: 44px; border-radius: 999px; background: var(--eo-terracotta); color: var(--eo-cream); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px; }
   .f-brand-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 34px; }
-  .brand-mark { object-fit: cover; }
+  .brand-mark { object-fit: cover; } 
   .f-copy { color: rgba(245,242,235,0.7); max-width: 400px; line-height: 1.7; margin-top: 20px; }
   .f-col-title { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
   .f-col ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; color: rgba(245,242,235,0.85); }
