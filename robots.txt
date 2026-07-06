@@ -1,0 +1,27 @@
+# ============================================
+# robots.txt for https://tourodisha.in
+# ============================================
+
+User-agent: *
+Allow: /
+
+# Block system and unnecessary files
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /frontend/
+Disallow: /backend/
+Disallow: /src/
+Disallow: /dist/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+
+# Optional: block search parameter URLs
+Disallow: /*?
+
+# Crawl delay (ignored by Google, respected by some bots)
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://tourodisha.in/sitemap.xml
