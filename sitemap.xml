@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://tourodisha.in/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- All Packages Page -->
+    <url>
+        <loc>https://tourodisha.in/packages.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Individual Tour Packages -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/golden-triangle.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/chilika.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/tribal-trail.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/bhitarkanika.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/similipal.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/buddhist-trail.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/gopalpur.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/daringbadi.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://tourodisha.in/packages/sambalpur.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+</urlset>
