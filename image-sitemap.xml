@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Golden Triangle -->
+    <url>
+        <loc>https://tourodisha.in/packages/golden-triangle.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/rath-yatra.jpg</image:loc>
+            <image:title>Golden Triangle Odisha Tour</image:title>
+            <image:caption>Jagannath Temple during Rath Yatra in Puri</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Chilika -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/chilika.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/chilika-lake.jpg</image:loc>
+            <image:title>Chilika Lake Tour</image:title>
+            <image:caption>Boating in Chilika Lake with Irrawaddy Dolphins</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Tribal Trail -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/tribal-trail.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/tribal-trail.jpg</image:loc>
+            <image:title>Odisha Tribal Tour</image:title>
+            <image:caption>Traditional tribal communities of Koraput</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Bhitarkanika -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/bhitarkanika.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/bhitarkanika.jpg</image:loc>
+            <image:title>Bhitarkanika National Park</image:title>
+            <image:caption>Mangrove forests and crocodiles in Bhitarkanika</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Similipal -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/similipal.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/similipal.jpg</image:loc>
+            <image:title>Similipal National Park</image:title>
+            <image:caption>Wildlife and waterfalls in Similipal Tiger Reserve</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Buddhist Trail -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/buddhist-trail.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/buddhist-triangle.jpg</image:loc>
+            <image:title>Odisha Buddhist Circuit</image:title>
+            <image:caption>Ancient Buddhist monasteries of Ratnagiri, Lalitgiri and Udayagiri</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Gopalpur -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/gopalpur.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/gopalpur.jpg</image:loc>
+            <image:title>Gopalpur Beach</image:title>
+            <image:caption>Sunset at Gopalpur-on-Sea</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Daringbadi -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/daringbadi.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/daringbadi.jpg</image:loc>
+            <image:title>Daringbadi Tour</image:title>
+            <image:caption>Scenic pine forests and waterfalls in Daringbadi</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Sambalpur -->
+
+    <url>
+        <loc>https://tourodisha.in/packages/sambalpur.html</loc>
+
+        <image:image>
+            <image:loc>https://tourodisha.in/images/hirakud.jpg</image:loc>
+            <image:title>Sambalpur Tour</image:title>
+            <image:caption>Hirakud Dam and Sambalpuri handloom heritage</image:caption>
+        </image:image>
+    </url>
+
+</urlset>
