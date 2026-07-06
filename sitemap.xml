@@ -9,18 +9,10 @@
         <priority>1.0</priority>
     </url>
 
-    <!-- All Packages Page -->
-    <url>
-        <loc>https://tourodisha.in/packages.html</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-
     <!-- Individual Tour Packages -->
 
     <url>
-        <loc>https://tourodisha.in/packages/golden-triangle.html</loc>
+         <loc>https://tourodisha.in/golden-triangle-odisha-tour</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
