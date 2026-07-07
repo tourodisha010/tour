@@ -146,7 +146,7 @@
     radial-gradient(900px 400px at 90% 100%, rgba(46,79,63,0.05), transparent 60%);
   }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .about h2 { font-size: clamp(3rem, 4.5vw, 3.5rem); line-height: 1.05; }
+  .about h2 { font-size: clamp(2.3rem, 4.5vw, 4.5rem); line-height: 1.05; }
   .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 36px; max-width: 480px; }
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--eo-terracotta); }
   .stat-lbl { font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--eo-ink-soft); margin-top: 6px; }
