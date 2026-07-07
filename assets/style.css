@@ -30,7 +30,7 @@
 
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .overline {
-    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
+    font-size: 1.5rem; font-weight: 600; letter-spacing: 0.24em;
     text-transform: uppercase; color: var(--eo-terracotta);
   }
   .about .overline { font-size: 0.95rem; }
