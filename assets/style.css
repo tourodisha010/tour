@@ -1,4 +1,4 @@
-  :root {
+:root {
     --eo-terracotta: #C85A3C;
     --eo-terracotta-dark: #A6472D;
     --eo-indigo: #1A2A44;
@@ -30,9 +30,10 @@
 
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .overline {
-    font-size: 1.5rem; font-weight: 600; letter-spacing: 0.24em;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
     text-transform: uppercase; color: var(--eo-terracotta);
   }
+  .about .overline { font-size: 0.95rem; }
 
   /* NAV */
   .nav {
@@ -52,7 +53,6 @@
     background: var(--eo-terracotta); color: var(--eo-cream);
     display: grid; place-items: center;
     font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px;
-  .brand-mark { object-fit: cover; }
   }
   .brand-text { display: flex; flex-direction: column; line-height: 1; }
   .brand-name {
@@ -62,7 +62,7 @@
     transition: color 500ms;
   }
   .nav.scrolled .brand-name { color: var(--eo-ink); text-shadow: none; }
-  .brand-sub { font-size: 0.99rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,242,235,0.9); margin-top: 4px; }
+  .brand-sub { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(245,242,235,0.9); margin-top: 4px; }
   .nav.scrolled .brand-sub { color: var(--eo-ink-soft); }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a { font-size: 14px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.4); transition: color 300ms; }
@@ -128,7 +128,7 @@
     color: rgba(28,26,23,0.35); margin: 60px 0;
   }
   .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: rgba(28,26,23,0.2); }
-  .divider .dot { color: var(--eo-terracotta); font-size: 10px; }
+  .divider .dot { color: var(--eo-terracotta); flex: none; display: inline-flex; }
 
   /* ABOUT */
   .about { background:
@@ -248,7 +248,6 @@
   .f-brand { display: flex; align-items: center; gap: 12px; }
   .f-brand-mark { width: 44px; height: 44px; border-radius: 999px; background: var(--eo-terracotta); color: var(--eo-cream); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px; }
   .f-brand-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 34px; }
-  .brand-mark { object-fit: cover; } 
   .f-copy { color: rgba(245,242,235,0.7); max-width: 400px; line-height: 1.7; margin-top: 20px; }
   .f-col-title { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
   .f-col ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; color: rgba(245,242,235,0.85); }
