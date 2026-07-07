@@ -43,6 +43,7 @@
   padding-top: 4px;
 }
 .overview-main h3 .overline { display: block; margin-bottom: 6px; }
+.overline-ul { text-decoration: underline; text-decoration-color: var(--eo-terracotta); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
 /* HIGHLIGHTS GRID */
 .highlight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 680px; }
