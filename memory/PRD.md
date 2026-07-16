@@ -4,9 +4,9 @@
 "built me a modern and yet classic website for my travel company which provides serves in odisha only, give it a locol touch and make it look authentic and appealing"
 
 ## Company
-- Name: Explore Odisha
-- Email: exploreodisha@gmail.com
-- Phone: 7077004850
+- Name: Tour Odisha
+- Email: etourodisha101@gmail.com
+- Phone: 7077006689
 - Location: Bhubaneshwar, Odisha
 - Design vibe: Earthy & authentic — terracotta, indigo, temple-stone, Pattachitra motifs
 
