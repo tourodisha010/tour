@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reading Konark: The Sun Temple as Manuscript | Tour Odisha Blog</title>
+<meta name="description" content="Every stone at the Konark Sun Temple is a paragraph. Our guides spend an afternoon translating three of them — chariot wheels, sculpture and silence." />
+<link rel="canonical" href="https://tourodisha.in/blog/reading-konark-sun-temple/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Tour Odisha" />
+<meta property="og:title" content="Reading Konark: The Sun Temple as Manuscript | Tour Odisha Blog" />
+<meta property="og:description" content="Every stone at the Konark Sun Temple is a paragraph. Our guides spend an afternoon translating three of them — chariot wheels, sculpture and silence." />
+<meta property="og:url" content="https://tourodisha.in/blog/reading-konark-sun-temple/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Reading Konark: The Sun Temple as Manuscript | Tour Odisha Blog" />
+<meta name="twitter:description" content="Every stone at the Konark Sun Temple is a paragraph. Our guides spend an afternoon translating three of them — chariot wheels, sculpture and silence." />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="../../assets/style.css" />
+<link rel="stylesheet" href="../../assets/package-detail.css" />
+<style>
+  .blog-body { max-width: 760px; margin: 0 auto; }
+  .blog-body p.lead { font-size: 1.08rem; line-height: 1.85; margin: 0 0 22px; }
+  .blog-meta-row { display:flex; gap:18px; align-items:center; color: var(--eo-ink-soft); font-size: 0.92rem; margin-bottom: 8px; flex-wrap: wrap; }
+  .blog-pullquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; line-height: 1.4; color: var(--eo-terracotta-dark); border-left: 3px solid var(--eo-terracotta); padding-left: 22px; margin: 34px 0; }
+  .blog-cta-box { background: var(--eo-surface); border: 1px solid var(--eo-border); border-radius: 12px; padding: 26px 28px; margin-top: 40px; display:flex; justify-content: space-between; align-items:center; gap: 20px; flex-wrap: wrap; }
+  .blog-cta-box h4 { font-family:'Cormorant Garamond', serif; font-size: 1.5rem; margin: 0 0 6px; color: var(--eo-indigo); }
+  .blog-cta-box p { margin:0; color: var(--eo-ink-soft); }
+  .blog-hub-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  @media (max-width: 860px) { .blog-hub-grid { grid-template-columns: 1fr; } }
+  .blog-card { text-decoration:none; color:inherit; display:block; }
+  .blog-card .thumb img { width:100%; height: 220px; object-fit: cover; border-radius: 10px; display:block; }
+  .blog-card .meta { font-size: 0.85rem; color: var(--eo-ink-soft); margin: 14px 0 4px; }
+  .blog-card h3 { font-family:'Cormorant Garamond', serif; font-size: 1.55rem; margin: 0 0 8px; transition: color 300ms; }
+  .blog-card:hover h3 { color: var(--eo-terracotta); }
+  .blog-card p { color: var(--eo-ink-soft); font-size: 0.95rem; line-height: 1.6; margin:0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"Reading Konark: The Sun Temple as Manuscript",
+  "description":"Every stone at the Konark Sun Temple is a paragraph. Our guides spend an afternoon translating three of them — chariot wheels, sculpture and silence.",
+  "image":"https://images.pexels.com/photos/32331079/pexels-photo-32331079.jpeg",
+  "datePublished":"2025-09-02",
+  "author":{"@type":"Person","name":"Debasish Patra"},
+  "publisher":{"@id":"https://tourodisha.in/#agency"},
+  "mainEntityOfPage":"https://tourodisha.in/blog/reading-konark-sun-temple/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://tourodisha.in/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://tourodisha.in/blog/"},
+    {"@type":"ListItem","position":3,"name":"Reading Konark: The Sun Temple as Manuscript","item":"https://tourodisha.in/blog/reading-konark-sun-temple/"}
+  ]
+}
+</script>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../index.html#home" class="brand">
+     <img src="../../images/logo.png" alt="Tour Odisha" class="brand-mark" />
+    <span class="brand-text">
+      <span class="brand-name"><span class="brand-name-accent">Tour</span> Odisha</span>
+      <span class="brand-divider"></span>
+      <span class="brand-sub">Journeys, rooted.</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="../../index.html#home">Home</a>
+    <a href="../../index.html#packages">Packages</a>
+    <a href="../../index.html#gallery">Destinations</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="../../index.html#about">About</a>
+    <a href="../../index.html#contact">Contact</a>
+    <a href="../../index.html#contact" class="btn-primary">Plan a Journey</a>
+  </div>
+  <button class="nav-toggle" onclick="document.getElementById('nav').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+</nav>
+<!-- HERO -->
+<section class="pkg-hero">
+  <img src="https://images.pexels.com/photos/32331079/pexels-photo-32331079.jpeg" alt="Carved stone chariot wheel at the Konark Sun Temple" />
+  <div class="hero-mask"></div>
+  <div class="crumb"><a href="../../index.html#home">Home</a><i class="fa-solid fa-angle-right"></i><a href="../index.html">Blog</a><i class="fa-solid fa-angle-right"></i>Reading Konark: The Sun Temple as Manuscript</div>
+  <div class="pkg-hero-inner">
+    <div class="overline hero-eyebrow">Field notes · Konark</div>
+    <h1>Reading Konark: The Sun Temple as Manuscript</h1>
+    <div class="hero-meta-row">
+      <span class="hero-pill"><i class="fa-solid fa-calendar"></i> 02 Sep 2025</span>
+      <span class="hero-pill"><i class="fa-solid fa-pen-nib"></i> Debasish Patra</span>
+      <span class="hero-pill"><i class="fa-solid fa-clock"></i> 6 min read</span>
+    </div>
+  </div>
+</section>
+
+<section class="pkg-overview">
+  <div class="container blog-body">
+      <p class="lead">Most visitors arrive at Konark expecting a temple and find, instead, a chariot. The 13th-century Sun Temple was conceived as a colossal stone ratha for the sun god Surya — twelve pairs of wheels, seven straining horses, the whole structure built to look mid-journey across the sky. You don't need to know a line of the history to feel it; the architecture does the explaining before any guide opens their mouth.</p>
+      <p class="lead">But it's the wheels that reward the closest reading. Each of the twelve pairs is nearly ten feet across and carved with such precision that several function as working sundials — the shadow cast by a small pin on the rim tells the time within minutes, even today. We like to stop at just one wheel and spend fifteen unhurried minutes reading it: spokes carved with women at their toilette, warriors, musicians, and small erotic friezes that were, in their era, entirely unremarkable — a plain description of life, not a scandal.</p>
+      <p class="lead">That's the first "paragraph" worth translating: Konark was never meant to be solemn. Odisha's temple sculptors of the Ganga dynasty treated the surface of stone the way a writer treats a page — dense, layered, unafraid of ordinary human detail sitting right beside the divine.</p>
+      <div class="blog-pullquote">&ldquo;Konark was never meant to be solemn — its sculptors treated stone the way a writer treats a page.&rdquo;</div>
+      <p class="lead">The second paragraph is architectural failure, oddly enough. The temple's main tower collapsed centuries ago, likely from a combination of unstable foundations and salt air off the Bay of Bengal, just a few kilometers away. What remains — the audience hall (jagamohana) and the base of the sanctum — is a fragment of a much taller original. Standing in that gap between what survived and what didn't is, for many of our travelers, more moving than an intact monument would have been.</p>
+      <p class="lead">The third: light. Konark was positioned so that the first rays of sunrise would strike the presiding deity directly. We try to time visits for early morning for exactly this reason — the stone changes colour by the hour, and the carvings that look flat at noon throw deep shadow at 7am, suddenly legible in a way they weren't twenty minutes earlier.</p>
+      <p class="lead">Read slowly enough, and Konark stops being a monument you photograph and becomes a text you're still halfway through translating by the time your guide calls you back to the car.</p>
+
+      <div class="blog-cta-box">
+        <div>
+          <h4>Want to experience this yourself?</h4>
+          <p>This story is part of our <strong>The Golden Triangle</strong> package.</p>
+        </div>
+        <a href="../../golden-triangle-odisha-tour/" class="btn-primary">View the package</a>
+      </div>
+
+      <p style="margin-top:36px;"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to all stories</a></p>
+    </div>
+</section>
+<footer>
+  <div class="f-inner">
+    <div class="divider" style="border-color: rgba(245,242,235,0.15)">
+      <span class="dot" style="color:var(--eo-terracotta)">&#9679;</span>
+    </div>
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">
+          <img src="../../images/logo.png" alt="Tour Odisha" class="f-brand-mark" />
+          <span class="f-brand-name"><span class="f-brand-name-accent">Tour</span> Odisha</span>
+        </div>
+        <p class="f-copy">An Odisha-only travel house crafting slow, rooted journeys through temples, tribal hills, mangroves and coastal towns — always led by locals who call this land home.</p>
+      </div>
+      <div class="f-col">
+        <div class="f-col-title">Explore</div>
+        <ul>
+          <li><a href="../../index.html#packages">Packages</a></li>
+          <li><a href="../../index.html#gallery">Destinations</a></li>
+          <li><a href="../../blog/index.html">Blogs</a></li>
+          <li><a href="../../index.html#about">About us</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <div class="f-col-title">Contact</div>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Bhubaneshwar, Odisha</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:7077006689">7077006689</a></li>
+          <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/917077006689" target="_blank">WhatsApp 7077006689</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tourodisha010@gmail.com">tourodisha010@gmail.com</a></li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-bot">
+      <div>© <span id="year"></span> Tour Odisha. Crafted with reverence in Bhubaneshwar.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/917077006689" target="_blank" rel="noreferrer" class="wa-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll); onScroll();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+
+</body>
+</html>
